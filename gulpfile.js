@@ -11,6 +11,16 @@ var elixir = require('laravel-elixir');
  |
  */
 
+var bowerDirectory = './resources/assets/bower/';
+
 elixir(function(mix) {
-    mix.less('app.less');
+    mix.scripts([
+    		'vue/dist/vue.min.js',
+            'jquery/dist/jquery.min.js',
+            'bootstrap/dist/js/bootstrap.min.js'
+            ], 'public/js/all.js', bowerDirectory);
+
+    mix.styles([
+       'bootstrap/dist/css/bootstrap.min.css'
+    ], 'public/css/all.css', bowerDirectory);
 });
