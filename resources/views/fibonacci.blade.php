@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Sucesión de Fibonacci</title>
+	<title>Fibonacci Number</title>
 	<link rel="stylesheet" type="text/css" href="css/all.css">
 	<script type="text/javascript" src="js/all.js"></script>
 </head>
@@ -24,6 +24,7 @@
 				    				<label>n = </label>
 				    				<input class="form-control" type="text" min="0" max="100" v-model="number">
 				    				<button class="btn btn-primary" @click="calculate">CALCULATE</button>
+				    				<p style="color: red;">${text}</p>
 				    			</div>
 				    		</div>
 				    	</div>
@@ -64,14 +65,34 @@
 		el: "#el",
 		data: {
 			number : 0,
+			text: "",
 			listResults : []
 		},	
 		methods: {
-			calculate : function() {			
-				$.get( PATH + '/fibonacci/' +  this.number )
-				.done(function(response){
-					this.listResults = response;
-				}.bind(this));
+			calculate : function() {	
+
+				this.text = "";
+				this.listResults = [];
+
+				if( this.isInt( this.number ) && this.number >= 0 && this.number <= 100 ){
+
+					$.get( PATH + '/fibonacci/' +  this.number )
+					.done(function(response){
+						this.listResults = response;
+					}.bind(this))
+					.fail(function(){
+						this.text = "Error";
+					});
+
+				} else{
+					this.text = "The number has to be bigger or equal to 0 and lower or equal to 100";
+				}
+				
+			},
+			isInt : function (value) {
+				  return !isNaN(value) && 
+				         parseInt(Number(value)) == value && 
+				         !isNaN(parseInt(value, 10));
 			}
 		},
 		delimiters: ['${', '}']

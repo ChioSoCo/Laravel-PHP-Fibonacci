@@ -61,7 +61,6 @@ Insert a posible Fibonacci Value that can be caculated:
 
 Delete a Fibonacci Value that can be caculated:
 
-  Parameter: num=int
   ```
   DELETE {url}/fibonacci/{number_to_delete}
   ```
