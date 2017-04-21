@@ -1,23 +1,23 @@
+# Laravel-PHP-Fibonacci
+
+One solution for Fibonacci Number made in Laravel
+
 <snippet>
   <content><![CDATA[
   
-## Laravel-PHP-Fibonacci
 
-Best solution for Fibonacci in PHP.
-
-# Project Information:
-  [Laravel 5.0 (compatible with PHP 5.4.9] )](https://laravel.com/docs/5.0/installation) 
-  
-  Added php-bignumbers "litipk/php-bignumbers": "^0.7.3" for the Big Decimal Operations
-# Front Dependencies where installed with Bower and laravel-elixir
-  link:http://getbootstrap.com/[Bootstrap (with JQuery)] 
-  Vue.js
+### Project Information:
+  [Laravel 5.0 compatible with PHP 5.4.9](https://laravel.com/docs/5.0/installation)  
+  Added [php-bignumbers](https://github.com/Litipk/php-bignumbers) "litipk/php-bignumbers": "^0.7.3" for the Big Decimal Operations
+### Front Dependencies where installed with Bower and laravel-elixir
+  [Bootstrap (with JQuery)](http://getbootstrap.com/) 
+  [Vue.js](https://vuejs.org/)
   
   
 ## Requirements
 
 1.- PHP >= 5.4, PHP < 7
-2.- Composer package manager
+2.- [Composer](http://getcomposer.org/) package manager
 
 ## Installation
 
