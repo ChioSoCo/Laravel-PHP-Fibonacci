@@ -37,7 +37,36 @@ php artisan serv
 ```
 
 ## Usage of Web Service
-:)
+This one only has 3 valid Requests.
+
+
+Get All registered Fibonacci Value´s with his calculation:
+
+  ```
+  GET {url}/fibonacci
+  ```
+  Example: localhost:8000/fibonacci
+  
+  <br />
+
+Insert a posible Fibonacci Value that can be caculated:
+
+  Paramter: num=int
+  ```
+  POST {url}/fibonacci
+  ```
+  Example: localhost:8000/fibonacci?num=5
+
+<br />
+
+Delete a Fibonacci Value that can be caculated:
+
+  Paramter: num=int
+  ```
+  DELETE {url}/fibonacci
+  ```
+  Example: localhost:8000/fibonacci?num=5
+
 
 ## History
 This project was made for a abilities test in accenture.
