@@ -51,7 +51,7 @@ Get All registered Fibonacci Value´s with his calculation:
 
 Insert a posible Fibonacci Value that can be caculated:
 
-  Paramter: num=int
+  Parameter: num=int
   ```
   POST {url}/fibonacci
   ```
@@ -61,11 +61,11 @@ Insert a posible Fibonacci Value that can be caculated:
 
 Delete a Fibonacci Value that can be caculated:
 
-  Paramter: num=int
+  Parameter: num=int
   ```
-  DELETE {url}/fibonacci
+  DELETE {url}/fibonacci/{number_to_delete}
   ```
-  Example: localhost:8000/fibonacci?num=5
+  Example: localhost:8000/fibonacci/5
 
 
 ## History
