@@ -11,4 +11,10 @@
 |
 */
 
-Route::get('/', 'FibonacciController@index');
+
+Route::get('/', function(){
+	return view('fibonacci');
+	//return \App\Functions\Fibonacci::fibonacciCalculation(100);
+});
+
+Route::resource('fibonacci', 'FibonacciController');
